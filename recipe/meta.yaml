@@ -25,17 +25,19 @@ requirements:
     - python >=3
     - numpy
     - scipy
-    - pandas >=0.22
+    - pandas >=0.25
     - xarray >=0.16.2
-    - dask >=0.18.0, !=2021.04
-    - rasterio
+    - dask >=0.18.0, <2021.04.0
+    - rasterio >=1.0
     - shapely
     - netcdf4
     - progressbar2
+    - tqdm
     - geopandas
     - yaml
+    - requests
     - cdsapi
-    - pyproj
+    - pyproj <=2.0
 
 test:
   imports:
