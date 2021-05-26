@@ -38,6 +38,8 @@ requirements:
     - requests
     - cdsapi
     - pyproj <=2.0
+    - numexpr
+    - bottleneck
 
 test:
   imports:
