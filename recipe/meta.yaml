@@ -1,6 +1,7 @@
 {% set name = "atlite" %}
 {% set version = "0.4.1" %}
 {% set sha256 = "f76c49ab319a66dba4136da434fee1746887d1a5e7fd8b0b0a2589d9f949d998" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -11,18 +12,18 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   noarch: python
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=64
     - setuptools-scm >=8
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy
     - scipy
     - pandas >=1.1
@@ -42,10 +43,12 @@ requirements:
     - geopandas
     - cdsapi
     - pytest
+    - cfgrib >=0.9.15.0
+    - h5netcdf >=1.6.1
 
 test:
   requires:
-    - python >=3.10
+    - python {{ python_min }}
   imports:
     - atlite
 
