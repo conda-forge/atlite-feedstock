@@ -1,6 +1,6 @@
 {% set name = "atlite" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "32428488e5baae26ef646fb12d930ba18c6879307ab88f59d83cd68e71776549" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "29ed68f68532e1fd233258719eeafe1af24059548115d10765945ae6c9496156" %}
 {% set python_min = "3.10" %}
 
 package:
