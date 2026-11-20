@@ -1,7 +1,7 @@
 {% set name = "atlite" %}
 {% set version = "0.7.0" %}
 {% set sha256 = "f19ec40c5b602ff5ae5534137a4e85a845b3642aaf1ad01ab4104e7acb037000" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -29,7 +29,7 @@ requirements:
     - pandas >=1.1
     - bottleneck
     - numexpr
-    - xarray >=0.20
+    - xarray >=2024.03.0
     - netcdf4
     - dask >=2021.10
     - toolz
@@ -41,10 +41,12 @@ requirements:
     - tqdm
     - pyproj >=2
     - geopandas
-    - cdsapi
-    - pytest
+    - cdsapi >=0.7.4
     - cfgrib >=0.9.15.0
     - h5netcdf >=1.6.1
+    - zarr >=3
+    - obstore >=0.9
+    - eccodes
 
 test:
   requires:
@@ -54,9 +56,9 @@ test:
 
 about:
   home: https://github.com/PyPSA/atlite
-  license: GPL-3.0-or-later
-  license_family: GPL
-  license_file: LICENSE.txt
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
   summary: Atlite converts climate weather data for Power Systems Analysis
   description: |
     Atlite is a free software, xarray-based Python library for converting
